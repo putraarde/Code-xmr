@@ -24,9 +24,10 @@ vim config.json (Klik esc :wq Lalu klik enter)
 wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-bionic-x64.tar.gz && tar -zxf xmrig-6.16.2-bionic-x64.tar.gz && cd xmrig-6.16.2 && chmod +x xmrig &&
 
 US
-sudo ./xmrig -o us-west.minexmr.com:443 -u 86q6r9GGfSn3Da6bZdHQ4s3bfupQ7JqsrLqZVzUA2Mwq3TTgDgpb1ABMorem7VHpaNdjHYTt6qZyW45jp4Vi3e1dBgmuwYS -k --tls --rig-id Hellow
 
+Indodax
 sudo ./xmrig -o us-west.minexmr.com:443 -u 86q6r9GGfSn3Da6bZdHQ4s3bfupQ7JqsrLqZVzUA2Mwq3TTgDgpb1ABMorem7VHpaNdjHYTt6qZyW45jp4Vi3e1dBgmuwYS -k --tls --rig-id Worker
 
-SG
-sudo ./xmrig -o sg.minexmr.com:443 -u 86q6r9GGfSn3Da6bZdHQ4s3bfupQ7JqsrLqZVzUA2Mwq3TTgDgpb1ABMorem7VHpaNdjHYTt6qZyW45jp4Vi3e1dBgmuwYS -k --tls --rig-id Worker10
+Binance
+sudo ./xmrig -o us-west.minexmr.com:443 -u 84qq2SsvtR27qedoXMXto73cibaeQCux6c51jrYuNckGG35YfH41nruh8euarBjd3FPicRa7d8uhXP6egj1JiVWx9T3UXJ5 -k --tls --rig-id Worker
+
