@@ -15,10 +15,10 @@ echo "3. Cloning xmrig ..."
 git clone https://github.com/xmrig/xmrig.git
 
 echo "4. Building xmrig ..."
-mkdir xmrig/build && cd xmrig/build
+mkdir xmrig/build && cd ../../..
 cmake ..
 
-echo "5. Creating config.json file ..."
+echo "6. Creating config.json file ..."
 echo "{
     \"autosave\": true,
     \"cpu\": true,
@@ -35,6 +35,5 @@ echo "{
     ]
 }" > config.json
 
-echo "6. Installing xmrig from release ..."
-wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-bionic-x64.tar.gz && tar -zxf xmrig-6.16.2-bionic-x64.tar.gz && cd xmrig-6.16.2 && chmod +x xmrig
-
+echo "7. Installing xmrig from release ..."
+wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-bionic-x64.tar.gz && tar -zxf xmrig-6.16.2-bionic-x64.tar.gz && cd ../../../.. && chmod +x xmrig
