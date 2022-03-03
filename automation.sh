@@ -2,8 +2,10 @@
 
 echo "Automation Start"
 
-echo "1. Update and upgrade ..."
+echo "1. Update ..."
 sudo apt update
+
+echo "1. Upgrade ..."
 sudo apt upgrade -y
 
 echo "2. Installing required package ..."
