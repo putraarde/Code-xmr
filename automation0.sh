@@ -1,24 +1,26 @@
-#!/bin/sh
+dash_around() {
+    echo "-----------------------------------"
+    echo $1
+    echo "-----------------------------------"
+}
 
-echo "Automation Start"
+dash_around "Automation Start"
 
-echo "1. Update ..."
-sudo apt update
+dash_around "1. Update and upgrade ..."
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
-echo "1. Upgrade ..."
-sudo apt upgrade -y
+dash_around "2. Installing required package ..."
+sudo apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
 
-echo "2. Installing required package ..."
-sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev -y
-
-echo "3. Cloning xmrig ..."
+dash_around "3. Cloning xmrig ..."
 git clone https://github.com/xmrig/xmrig.git
 
-echo "4. Building xmrig ..."
-mkdir xmrig/build && cd ../../..
+dash_around "4. Building xmrig ..."
+mkdir xmrig/build && cd xmrig/build
 cmake ..
 
-echo "6. Creating config.json file ..."
+dash_around "5. Creating config.json file ..."
 echo "{
     \"autosave\": true,
     \"cpu\": true,
@@ -35,5 +37,5 @@ echo "{
     ]
 }" > config.json
 
-echo "7. Installing xmrig from release ..."
-wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-bionic-x64.tar.gz && tar -zxf xmrig-6.16.2-bionic-x64.tar.gz && cd ../../../.. && chmod +x xmrig
+dash_around "6. Installing xmrig from release ..."
+wget https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-static-x64.tar.gz && tar -zxf xmrig-6.16.4-linux-static-x64.tar.gz && cd xmrig-6.16.4 && chmod +x xmrig &&
