@@ -38,4 +38,4 @@ echo "{
 }" > config.json
 
 dash_around "6. Installing xmrig from release ..."
-wget https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-static-x64.tar.gz && tar -zxf xmrig-6.16.4-linux-static-x64.tar.gz && cd xmrig-6.16.4 && chmod +x xmrig 
+wget https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-static-x64.tar.gz && tar -zxf xmrig-6.16.4-linux-static-x64.tar.gz && cd xmrig-6.16.4 && chmod +x xmrig
